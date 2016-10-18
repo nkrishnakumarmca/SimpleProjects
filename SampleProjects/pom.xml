@@ -9,5 +9,8 @@
   	<module>JPASample</module>
   	<module>SpringBootSample</module>
   	<module>JunitSample</module>
+  	<module>CXFRestwebservice</module>
+  	<module>log4j2</module>
+  	<module>AsyncWebservices</module>
   </modules>
 </project>

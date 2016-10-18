@@ -46,4 +46,3 @@ public class LocalDateConverter implements AttributeConverter<LocalDate, Date> {
         return value.toLocalDate();
     }
 }
-

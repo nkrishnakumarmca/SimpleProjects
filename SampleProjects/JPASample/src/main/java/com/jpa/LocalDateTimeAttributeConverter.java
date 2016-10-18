@@ -48,7 +48,3 @@ public class LocalDateTimeAttributeConverter implements AttributeConverter<Local
 		return (sqlTimestamp == null ? null : sqlTimestamp.toLocalDateTime());
 	}
 }
-
-
-
-

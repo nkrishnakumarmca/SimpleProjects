@@ -1,5 +1,7 @@
 package com.test.calc;
 
+import java.util.concurrent.Future;
+
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 /**
@@ -8,6 +10,7 @@ import javax.jws.WebParam;
  *
  */
 import javax.jws.WebService;
+import javax.ws.rs.core.Response;
 
 @WebService
 public interface CalculatorIfc {
@@ -47,4 +50,10 @@ public interface CalculatorIfc {
 	 */
 	@WebMethod
 	public float division(int num1, int num2) throws Exception;
+	
+	
+	   //async polling Method
+    public Response<AddNumbersResponse> addNumbers(int number1, int number2);
+    //async callback Method
+    public Future<?> calladdNumbers(int number1, int number2, AsyncHandler<AddNumbersResponse>);
 }

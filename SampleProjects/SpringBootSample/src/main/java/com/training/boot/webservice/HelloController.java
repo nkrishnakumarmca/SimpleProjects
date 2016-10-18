@@ -24,7 +24,7 @@ public class HelloController {
 
 	@RequestMapping(value="/getemployee/{employeeId}",method=RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public ResponseEntity<?> getEmployeeDetails(@PathParam("employeeId") String id )
+	public ResponseEntity<?> getEmployeeDetails(@PathParam("employeeId") String id ) throws InterruptedException
 	{
 		return new ResponseEntity<Employee>(new Employee("krishna",1,"SW"),HttpStatus.OK);
 		

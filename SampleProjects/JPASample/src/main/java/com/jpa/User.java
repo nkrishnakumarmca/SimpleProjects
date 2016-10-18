@@ -2,15 +2,14 @@ package com.jpa;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
-import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
 
 @Entity
 @Table(name = "Users")
@@ -26,8 +25,13 @@ public class User {
 	private String password;
 
 	private LocalDateTime loginDateTime;
-	
+
 	private LocalDate arrival;
+
+	/*
+	 * Date will work as normal in java 7
+	 */
+	private Date date;
 
 	/**
 	 * @return the id
@@ -97,7 +101,8 @@ public class User {
 	}
 
 	/**
-	 * @param loginDateTime the loginDateTime to set
+	 * @param loginDateTime
+	 *            the loginDateTime to set
 	 */
 	public void setLoginDateTime(LocalDateTime loginDateTime) {
 		this.loginDateTime = loginDateTime;
@@ -111,11 +116,26 @@ public class User {
 	}
 
 	/**
-	 * @param arrival the arrival to set
+	 * @param arrival
+	 *            the arrival to set
 	 */
 	public void setArrival(LocalDate arrival) {
 		this.arrival = arrival;
 	}
 
-	
+	/**
+	 * @return the date
+	 */
+	public Date getDate() {
+		return date;
+	}
+
+	/**
+	 * @param date
+	 *            the date to set
+	 */
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 }
